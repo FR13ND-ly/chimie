@@ -1,0 +1,53 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 10rem;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+}
+
+.title {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 999;
+}
+
+.wrapper {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    img {
+        flex-shrink: 0;
+        height: 20rem;
+        width: auto;
+        border-radius: 2rem;
+    }
+}
+
+ol,
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}

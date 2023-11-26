@@ -1,0 +1,46 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200vh;
+    width: 100vw;
+    view-timeline: --calorimetry block;
+}
+
+div {
+    position: fixed;
+    top: 6rem;
+    left: 5vw;
+    width: 50%;
+    transform: translateX(-100vw);
+    animation: push auto linear forwards;
+    animation-timeline: --calorimetry;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+@keyframes push {
+    10% {
+        transform: translateX(-100vw);
+    }
+    25% {
+        transform: translateX(0);
+    }
+    80% {
+        transform: translateY(0);
+    }
+    95% {
+        transform: translateY(-25vw);
+    }
+    100% {
+        transform: translateY(-100vw);
+    }
+}

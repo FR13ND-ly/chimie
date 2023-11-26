@@ -1,0 +1,64 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    view-timeline: --laws block;
+}
+
+.laws {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 4rem;
+    position: relative;
+    animation: push auto linear forwards;
+    animation-timeline: --laws;
+    opacity: 1;
+    h1 {
+        font-size: 4rem;
+    }
+    .lavoisier,
+    .hess {
+        h2 {
+            font-size: 2.4rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+        line-height: 1.6;
+    }
+    .lavoisier {
+        .formula {
+            margin-top: 2rem;
+            font-size: 1.4rem;
+        }
+    }
+    .wrapper {
+        display: flex;
+        gap: 5rem;
+    }
+}
+
+@keyframes push {
+    59% {
+        position: relative;
+    }
+    60% {
+        position: fixed;
+        top: 5rem;
+        transform: translateX(0rem);
+    }
+    95% {
+        position: fixed;
+        top: 5rem;
+        transform: translate(65vw);
+    }
+    100% {
+        position: fixed;
+        top: 5rem;
+        transform: translate(100vw);
+    }
+}

@@ -1,0 +1,212 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200vh;
+    width: 100vw;
+    view-timeline: --types block;
+}
+
+.types {
+    top: 0;
+    position: fixed;
+    text-align: center;
+    width: 50%;
+    h1 {
+        font-size: 1.2rem;
+        padding-top: 2rem;
+        animation: def auto linear forwards;
+        animation-timeline: --types;
+        margin-bottom: 10rem;
+        transform: translateY(-5rem);
+    }
+    p {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        position: absolute;
+    }
+    .types-1 {
+        animation: det-1 auto linear forwards;
+        animation-timeline: --types;
+        opacity: 0;
+    }
+    .types-2 {
+        animation: det-2 auto linear forwards;
+        animation-timeline: --types;
+        opacity: 0;
+    }
+    &--title {
+        font-size: 5rem;
+        animation: title auto linear forwards;
+        animation-timeline: --types;
+        color: var(--bright-blue);
+        opacity: 0;
+        &::before {
+            content: "Endo";
+            animation: types-name auto linear forwards;
+            animation-timeline: --types;
+        }
+    }
+    &--formula {
+        display: flex;
+        margin-top: 20rem;
+        animation-timeline: --types;
+        font-size: 5rem;
+        justify-content: center;
+        animation: types-text auto linear forwards;
+        animation-timeline: --types;
+        opacity: 0;
+    }
+    .arrow {
+        display: block;
+        padding: 0 1rem;
+        animation: types-arrow auto linear forwards;
+        animation-timeline: --types;
+    }
+}
+
+@keyframes def {
+    20% {
+        transform: translateY(-5rem);
+    }
+    25% {
+        transform: translateY(0rem);
+    }
+    85% {
+        transform: translateY(0rem);
+    }
+    90% {
+        transform: translateY(-8rem);
+    }
+    100% {
+        transform: translateY(-8rem);
+    }
+}
+@keyframes det-1 {
+    22% {
+        transform: translate3d(0, 50px, 0);
+        opacity: 0;
+    }
+    27% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    45% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    50% {
+        transform: translate3d(0, -50px, 0);
+        opacity: 0;
+    }
+    93% {
+        transform: translate3d(0, -50px, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes det-2 {
+    50% {
+        transform: translate3d(0, 50px, 0);
+        opacity: 0;
+    }
+    55% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    90% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    95% {
+        transform: translate3d(0, -50px, 0);
+        opacity: 0;
+    }
+    93% {
+        transform: translate3d(0, -50px, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes types-text {
+    20% {
+        transform: translate3d(0, 50px, 0);
+        opacity: 0;
+    }
+    25% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    90% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    93% {
+        transform: translate3d(0, -50px, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes title {
+    20% {
+        transform: translate3d(0, 50px, 0);
+        opacity: 0;
+    }
+    25% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    50% {
+        color: var(--bright-blue);
+    }
+    51% {
+        color: var(--hot-red);
+    }
+    90% {
+        color: var(--hot-red);
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    93% {
+        color: var(--hot-red);
+        transform: translate3d(0, -50px, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes types-name {
+    50% {
+        content: "Endo";
+    }
+    51% {
+        content: "End";
+    }
+    52% {
+        content: "En";
+    }
+    53% {
+        content: "E";
+    }
+    54% {
+        content: "Ex";
+    }
+    55% {
+        content: "Exo";
+    }
+    100% {
+        content: "Exo";
+    }
+}
+
+@keyframes types-arrow {
+    50% {
+        transform: rotate(0);
+    }
+    55% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
